@@ -7,16 +7,16 @@ from md import util
 
 
 class InfoForm(FlaskForm):
-    capShape = SelectField('Cap-Shape', choices=util.__attributes['cap-shape'])
-    capColor = SelectField('Cap-Color', choices=util.__attributes['cap-color'])
-    bruises = SelectField('Bruises', choices=util.__attributes['bruises'])
-    odor = SelectField('Odor', choices=util.__attributes['odor'])
-    gillSize = SelectField('Gill Size', choices=util.__attributes['gill-size'])
-    gillColor = SelectField('Gill-color', choices=util.__attributes['gill-color'])
-    stalkRoot = SelectField('Stalk Root', choices=util.__attributes['stalk-root'])
-    ringType = SelectField('Ring type', choices=util.__attributes['ring-type'])
-    spc = SelectField('Spore Print Color', choices=util.__attributes['spore-print-color'])
-    capShape = SelectField('Population', choices=util.__attributes['population'])
+    capShape = SelectField('Cap-Shape', choices=util.get_att()['cap-shape'])
+    capColor = SelectField('Cap-Color', choices=util.get_att()['cap-color'])
+    bruises = SelectField('Bruises', choices=util.get_att()['bruises'])
+    odor = SelectField('Odor', choices=util.get_att()['odor'])
+    gillSize = SelectField('Gill Size', choices=util.get_att()['gill-size'])
+    gillColor = SelectField('Gill-color', choices=util.get_att()['gill-color'])
+    stalkRoot = SelectField('Stalk Root', choices=util.get_att()['stalk-root'])
+    ringType = SelectField('Ring type', choices=util.get_att()['ring-type'])
+    spc = SelectField('Spore Print Color', choices=util.get_att()['spore-print-color'])
+    population = SelectField('Population', choices=util.get_att()['population'])
     
     submit = SubmitField('Is it safe?')
 

@@ -19,6 +19,9 @@ def detect(data2):
     else:
         return "Mushroom is edible"
 
+def get_att():
+    return __attributes
+
 
 def load_saved_artifacts():
     global __attributes
