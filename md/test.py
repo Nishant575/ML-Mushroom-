@@ -1,6 +1,11 @@
 import util
-class printatt():
-    cps = util.get_att()['cap-shape']
-        
-pt = printatt()
-print(pt.cps)
+
+a = "sda"
+b= "das"
+c = "sadas"
+lst = []
+lst.extend([a,b,c])
+d = ["d"]
+print(lst)
+print(type(lst))
+

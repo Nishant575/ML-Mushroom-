@@ -13,11 +13,11 @@ def detect(data2):
     new_data = np.array(data).reshape(1, -1)
     new_data = __encoder.transform(new_data)
     new_data = np.delete(new_data[0],0)
-    pred = __model.predict(new_data)
+    pred = __model.predict(new_data.reshape(1, -1))
     if pred[0] == 1.0:
-        return "Mushroom is poisonous"
+        return "Mushroom is poisonous",1
     else:
-        return "Mushroom is edible"
+        return "Mushroom is edible",0
 
 def get_att():
     return __attributes
@@ -45,4 +45,3 @@ def load_saved_artifacts():
             __encoder = pickle.load(f)
     
 load_saved_artifacts()
-

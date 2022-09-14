@@ -14,18 +14,18 @@
     <div class="main-cont2 justify-content-center">
       <div class="row justify-content-center">
         <div class="col">
-          <div class="conatiner info-form">
+          <div class="conatiner info-form mt-4">
             <form action="" method="post" enctype="multipart/form-data">
               {{ form.hidden_tag() }}
               <fieldset class="form-group">
-                <legend class="text-center mb-4 border-bottom title-form"style="text-align: center; letter-spacing: 4px;">
+                <legend class="text-center mb-2 border-bottom title-form"style="text-align: center; letter-spacing: 4px;">
                   <h3>
                   Enter Mushroom Characteristics
                   </h3>
                 </legend>
-                <div class="row">
+                <div class="row justify-content-md-center px-5">
                   
-                  <div class="col-4 d-flex justify-content-center">
+                  <div class="col-3 d-flex justify-content-center">
                     
                     <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
                       {{ form.capShape.label(class="form-control-label") }}
@@ -37,13 +37,13 @@
                               {% endfor %}
                           </div>
                       {% else %}
-                          {{ form.capShape(class="form-control form-control-lg") }}
+                          {{ form.capShape(class="form-control form-control-sm") }}
                       {% endif %}
                     </div>
                   
                   </div>
 
-                  <div class="col-4 d-flex justify-content-center">
+                  <div class="col-3 d-flex justify-content-center">
                     
                     <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
                       {{ form.capColor.label(class="form-control-label") }}
@@ -55,13 +55,13 @@
                               {% endfor %}
                           </div>
                       {% else %}
-                          {{ form.capColor(class="form-control form-control-lg") }}
+                          {{ form.capColor(class="form-control form-control-sm") }}
                       {% endif %}
                     </div>
                   
                   </div>
 
-                  <div class="col-4 d-flex justify-content-center">
+                  <div class="col-3 d-flex justify-content-center">
                     
                     <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
                       {{ form.bruises.label(class="form-control-label") }}
@@ -73,15 +73,231 @@
                               {% endfor %}
                           </div>
                       {% else %}
-                          {{ form.bruises(class="form-control form-control-lg") }}
+                          {{ form.bruises(class="form-control form-control-sm") }}
                       {% endif %}
                     </div>
                   
                   </div>
+
+                  <div class="col-3 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.odor.label(class="form-control-label") }}
+                      {% if form.odor.errors %}
+                          {{ form.odor(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.odor.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.odor(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
+                  <div class="col-3 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.gillSize.label(class="form-control-label") }}
+                      {% if form.gillSize.errors %}
+                          {{ form.gillSize(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.gillSize.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.gillSize(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
+                  <div class="col-3 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.gillColor.label(class="form-control-label") }}
+                      {% if form.gillColor.errors %}
+                          {{ form.gillColor(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.gillColor.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.gillColor(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
+                  <div class="col-3 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.stalkRoot.label(class="form-control-label") }}
+                      {% if form.stalkRoot.errors %}
+                          {{ form.stalkRoot(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.stalkRoot.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.stalkRoot(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
+                  <div class="col-3 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.ringType.label(class="form-control-label") }}
+                      {% if form.ringType.errors %}
+                          {{ form.ringType(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.ringType.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.ringType(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
+                  <div class="col-6 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.spc.label(class="form-control-label") }}
+                      {% if form.spc.errors %}
+                          {{ form.spc(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.spc.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.spc(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
+                  <div class="col-6 d-flex justify-content-center">
+                    
+                    <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                      {{ form.population.label(class="form-control-label") }}
+                      {% if form.population.errors %}
+                          {{ form.population(class="form-control is-invalid") }}
+                          <div class="invalid-feedback">
+                              {% for error in form.population.errors %}
+                                  <span>{{ error }}</span>
+                              {% endfor %}
+                          </div>
+                      {% else %}
+                          {{ form.population(class="form-control form-control-sm") }}
+                      {% endif %}
+                    </div>
+                  
+                  </div>
+
                 
                 </div>
-              <fieldset>
+              <div class="row justify-content-md-center">
+                <div class="col d-flex justify-content-center">
+                  <div class="form-group">
+                    {{ form.submit(class="btn submit-btn") }}
+                  </div>
+                </div>  
+              </div>
+             <div class="row justify-content-md-center">
+                <div class="col d-flex justify-content-center">
+                  {% if col == 1 %}
+                    <p class="rslt1">{{ans}}</p>
+                  {%elif col == 0%}
+                    <p class="rslt2">{{ans}}</p>
+                  {%endif%}
+                </div>  
+              </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center mt-4 legends">
+        <div class="col-4 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+                cap-shape: bell=b,conical=c,convex=x,flat=f, knobbed=k,sunken=s
+            </p>
+          </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+               cap-color: brown=n,buff=b,cinnamon=c,gray=g,green=r,pink=p,purple=u,red=e,white=w,yellow=y
+            </p>
+          </div>
+        </div> 
+        <div class="col-4 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+                bruises: bruises=t,no=f
+            </p>
+          </div>
+        </div> 
+        <div class="col-4 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+              stalk-root: bulbous=b,club=c,cup=u,equal=e,rhizomorphs=z,rooted=r,missing=?
+               
+            </p>
+          </div>
+        </div> 
+        <div class="col-4 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+               population: abundant=a,clustered=c,numerous=n,scattered=s,several=v,solitary=y
+            </p>
+          </div>
+        </div> 
+        <div class="col-4 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+              gill-size: broad=b,narrow=n 
+            </p>
+          </div>
+        </div> 
+        <div class="col-6 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+                 odor: almond=a,anise=l,creosote=c,fishy=y,foul=f,musty=m,none=n,pungent=p,spicy=s
+            </p>
+          </div>
+        </div> 
+        <div class="col-6 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+               ring-type: cobwebby=c,evanescent=e,flaring=f,large=l,none=n,pendant=p,sheathing=s,zone=z
+            </p>
+          </div>
+        </div> 
+        <div class="col-6 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+                
+                gill-color: black=k,brown=n,buff=b,chocolate=h,gray=g,green=r,orange=o,pink=p,purple=u,red=e,white=w,yellow=y
+            </p>
+          </div>
+        </div> 
+        <div class="col-6 d-flex justify-content-center">
+          <div class="container info">
+            <p>
+                spore-print-color: black=k,brown=n,buff=b,chocolate=h,green=r,orange=o,purple=u,white=w,yellow=y
+            </p>
           </div>
         </div>
       </div>
