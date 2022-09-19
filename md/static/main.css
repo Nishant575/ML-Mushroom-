@@ -48,7 +48,7 @@ body,html{
     height: 70px;
     z-index: 0;
     font-size: 20px;
-    transition: 300ms;
+    transition: 500ms;
     border-width: 4px;
     border-color: #505c1d;
     font-weight: bold;
@@ -64,7 +64,7 @@ body,html{
 
 .info{
 
-    font-size: 1em;
+    font-size: 0.85em;
     margin-top: 7%;
     text-align: center;
 }
@@ -93,8 +93,8 @@ body,html{
 
 .legends{
 
-    background: rgb(247 247 247 / 20%);
-    color: #161616;
+    background: rgb(148 141 80 / 60%);
+    color: #161515;
     font-weight: 700;
 
 }
